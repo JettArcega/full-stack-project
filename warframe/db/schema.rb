@@ -10,12 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_002324) do
+ActiveRecord::Schema.define(version: 2018_10_26_005945) do
 
   create_table "enemies", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "enemy_items", force: :cascade do |t|
+    t.integer "item_id"
+    t.integer "enemy_id"
+    t.integer "rarity_id"
+    t.decimal "enemyItemDropChance"
+    t.decimal "enemyBlueprintDropChance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["enemy_id"], name: "index_enemy_items_on_enemy_id"
+    t.index ["item_id"], name: "index_enemy_items_on_item_id"
+    t.index ["rarity_id"], name: "index_enemy_items_on_rarity_id"
   end
 
   create_table "items", force: :cascade do |t|

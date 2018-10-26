@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: one
+  enemy: one
+  rarity: one
+  enemyItemDropChance: 9.99
+  enemyBlueprintDropChance: 9.99
+
+two:
+  item: two
+  enemy: two
+  rarity: two
+  enemyItemDropChance: 9.99
+  enemyBlueprintDropChance: 9.99
