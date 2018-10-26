@@ -1,2 +1,21 @@
-<h1>Items#action</h1>
-<p>Find me in app/views/items/action.html.erb</p>
+<h2>This item is called <%= @item.name %></h2>
+
+<ul>
+    <li>
+        Item description: <%= @item.description %>
+    </li>
+    <li>
+        Item price: <%= @item.price %>
+    </li>
+    <li>
+        Item Drop Chance: 
+        <% @enemy_item.each do |e| %>
+            <ul>
+                <li><%= e.enemyItemDropChance %> on <% @enemy.where(:id => e.enemy_id).each do |enemy| %>
+                                                <%= enemy.name %>
+                                                <% end %>
+                </li>
+            </ul>
+        <% end %>
+    </li>
+</ul>
