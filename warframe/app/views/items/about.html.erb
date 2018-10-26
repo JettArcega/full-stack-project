@@ -1,0 +1,7 @@
+<h1>This is my ERD</h1>
+<p>
+    This website is designed for users to be able to look through the different items in warframe and to provide minor informations about them. I used a warframe API, to populate most of the items, and Faker to fill up the database with more information.
+    As you can see, I made 4 tables(Enemy_item, Enemy, Item, Rarity). I needed 4 in order for me to have multiple drops. Having the relationship between Item, Enemy_item and Enemy, I was able to have multiple items dropping from an enemy and vice versa.
+    The plan was to populate the database using the API and Faker before taking the name of the item to use as a link, in the website, for users to click on. 
+</p>
+<p><%= image_tag("erd.JPG", :alt => "Project Erd") %></p>
